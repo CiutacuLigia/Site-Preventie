@@ -15,7 +15,7 @@ body {
   -webkit-backdrop-filter: blur(10px); /* suport Safari */
   display: flex;
   align-items: center;
-  padding: 1em 3em;
+  padding: 0 10em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -372,3 +372,4 @@ footer a {
   color: white;
   text-decoration: underline;
 }
+
