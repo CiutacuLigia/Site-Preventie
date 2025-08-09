@@ -1,0 +1,61 @@
+.formular {
+  max-width: 500px;
+  margin: 3rem auto 5rem auto;
+  padding: 2.5rem 2rem;
+  background: #e7f0fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(30, 78, 121, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e4e79;
+}
+
+.formular .title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.field {
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #1e4e79;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field:focus {
+  border-color: #0072c6;
+  box-shadow: 0 0 6px #0072c6aa;
+}
+
+textarea.field {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.btn {
+  padding: 0.9rem;
+  background-color: #1e4e79;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(30, 78, 121, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005aab;
+  box-shadow: 0 8px 16px rgba(0, 90, 171, 0.5);
+}
+

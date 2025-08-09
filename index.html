@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proiectul SAVE</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css"/>
 </head>
 <body>
 
@@ -13,9 +14,10 @@
   <div class="navbar">
     <img src="img/logo.svg" alt="Logo" class="logo">
     <ul class="nav-links">
-      <li><a href="#">Acasă</a></li>
-      <li><a href="#">Despre</a></li>
-      <li><a href="#">Resurse</a></li>
+      <li><a href="index.html">Acasă</a></li>
+      <li><a href="despre.html">Despre</a></li>
+      <li><a href="resurse.html">Resurse</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </header>
@@ -133,20 +135,52 @@
 
 
 
-  <!-- Testimoniale -->
-  <section class="testimonials">
-    <h3>Testimoniale</h3>
+<!-- Testimoniale -->
+<section class="testimonials">
+  <h3>Testimoniale</h3>
+
+  <div class="testimonial-wrapper">
+    <button class="arrow left">&#10094;</button>
+
     <div class="testimonial-container">
-      <div class="testimonial">
-        <h4>Andreea <span>- Ambasador SAVE</span></h4>
-        <p>"Când am terminat prezentarea... Atunci am simțit că am făcut ceva important."</p>
-      </div>
-      <div class="testimonial">
-        <h4>Maria, clasa a XI-a <span>- Elevă participantă</span></h4>
-        <p>"Am realizat că nu e suficient să știi ce e bine și ce e rău..."</p>
+      <div class="testimonial-track">
+        <div class="testimonial-card">
+          <div class="avatar" style="background-color: #2ecc71;">A</div>
+          <div class="testimonial-text">
+            <h4>Andreea <span>Ambasador SAVE</span></h4>
+            <p>"Când am terminat prezentarea, o colegă de la clasa a IX-a mi-a spus că nu se gândise niciodată cât de ușor poți aluneca spre ceva periculos doar pentru că vrei să fii acceptat. Atunci am simțit că am făcut ceva important."</p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="avatar" style="background-color: #3498db;">M</div>
+          <div class="testimonial-text">
+            <h4>Maria, clasa a XI-a <span>Elevă participantă</span></h4>
+            <p>"Am realizat că nu e suficient să știi ce e bine și ce e rău. Trebuie să ai și curajul să vorbești despre asta, pentru ca ceilalți să te audă."</p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="avatar" style="background-color: #e67e22;">I</div>
+          <div class="testimonial-text">
+            <h4>Ion <span>Profesor mentor</span></h4>
+            <p>"Mă bucur să văd elevi implicați și curajoși, gata să discute deschis problemele reale cu care se confruntă."</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+
+    <button class="arrow right">&#10095;</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+
 
   <!-- Footer -->
   <footer>
@@ -157,7 +191,7 @@
       </div>
       <div>
         <h4>Implică-te</h4>
-        <p><a href="#">Contact</a></p>
+        <p><a href="contact.html">Contact</a></p>
       </div>
       <div>
         <h4>Contact</h4>
