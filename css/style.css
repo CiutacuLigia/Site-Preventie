@@ -1,37 +1,48 @@
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: #f5f5f5;
-  color: #333;
-   padding-top: 80px; /* Ajustează în funcție de cât de înaltă e navbar-ul */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1; /* umple spațiul liber */
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8); /* semi-transparent */
-  backdrop-filter: blur(10px); /* opțional: efect de blur în spate */
-  -webkit-backdrop-filter: blur(10px); /* suport Safari */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
-  padding: 0 10em;
+  padding: 0 5em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  height: 140px; /* mai mare decât înainte */
 }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  padding-top: 140px; /* trebuie să fie egal cu height-ul navbar-ului */
+}
+
+.navbar .logo {
+  height: 180px; /* aproape cât navbar-ul */
+  margin: 0;
+  display: block;
+}
+
 
 header a:hover {
   color: rgb(112, 128, 170);
 }
 
-.logo {
-  border-radius: 50%;
-}
-.navbar .logo {
-  height: 130px;
-  margin-right: 2em;
-  margin-left: 3em;
-}
 .nav-links {
   list-style: none;
   display: flex;
@@ -46,23 +57,19 @@ header a:hover {
 }
 
 
-
-
-
  /* Footer */
 footer {
-  background: #4a82f3;
+  background: #277a92;
   color: white;
-  padding: 2em;
+  padding: 1em;
 }
 .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 0.5em;
 }
 footer a {
   color: white;

@@ -1,5 +1,5 @@
 .about-section {
-  background: #f5f5f5;
+  background: #f2f2f2;
   padding: 4em 2em;
   position: relative;
   z-index: 1;
@@ -26,10 +26,25 @@
   margin-bottom: 0.5em;
 }
 
+#why {
+  font-size: 1.6rem;
+}
+
 .about-section p {
   font-size: 1.05rem;
   line-height: 1.8;
   color: #333;
+}
+
+.about-section #blue{
+  color: #066bad;
+  font-weight: bold;
+  font-size: 1.09rem;
+}
+
+.container .blue{
+  color: #066bad;
+  font-weight: bold;
 }
 
 /* Imaginea de fundal (mâinile) */
@@ -51,7 +66,7 @@
 
 
 .info-section {
-  background-color: #bcd8ea; /* culoarea fundalului din imagine */
+  background-color: #f2f2f2; /* culoarea fundalului din imagine */
   padding: 3em 2em;
 }
 
@@ -66,7 +81,6 @@
 .image-wrapper img {
   width: 400px; /* ajustează dimensiunea imaginii */
   height: auto;
-  border-radius: 6px;
   object-fit: cover;
 }
 
@@ -89,18 +103,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: #1e4e79;
+  color: #066bad;
   gap: 1em;
 }
 
 .text-wrapper h3 span {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.8rem;
-  color: #1e4e79;
+  color: #5b9373;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
   margin-left: 0;
 }
-
 
 
 
@@ -111,14 +124,93 @@
   margin-bottom: 1.5em;
 }
 
+/*sectiunea intrebari frecvente*/
+.faq-section {
+  background-color: #f2f2f2;
+  padding: 4em 2em;
+}
+
+.faq-section .container {
+  max-width: 1200px; /* sau cât de îngust vrei să fie */
+  margin: 0 auto; /* pentru a centra containerul */
+  padding: 0 0; /* padding intern pentru spațiu pe lateral */
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: #066bad;
+  margin-bottom: 2em;
+  font-size: 2rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1em;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1em;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  color: #066bad;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 1em 1em;
+  color: #555;
+}
+
+.faq-answer p {
+  margin: 0.5em 0;
+}
+
+/* Când e deschis */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+
+
 @media (max-width: 768px) {
   .info-section .container {
     flex-direction: column;
   }
 
   .image-wrapper img {
-    width: 100%;  /* imaginea să ocupe tot spațiul disponibil */
-    max-width: 400px; /* să nu devină prea mare */
-    margin-bottom: 1.5em; /* spațiu sub imagine */
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1.5em;
+  }
+  
+  .about-section::before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh; /* păstrează o înălțime vizibilă */
+    background-size: contain;
   }
 }
+
