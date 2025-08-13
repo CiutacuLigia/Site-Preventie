@@ -1,0 +1,351 @@
+body{
+    background-color: #f2f2f2;
+      font-size: 16px;
+  line-height: 1.6;
+
+}
+
+/* Secțiune Introducere */
+.intro {
+ background-color: #f2f2f2;
+  padding: 3em 15em;
+  text-align: center;
+}
+
+.intro-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #066bad;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #066bad;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #2a292a;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.intro-text h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #066bad;
+}
+
+/* fereastra pop-up imagine*/
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  padding-top: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.3);
+  border: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.lightbox-prev {
+  left: 40px;
+}
+
+.lightbox-next {
+  right: 40px;
+}
+
+/* Stil pentru carusel cu mai multe imagini pe rând */
+.carousel-container {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 320px;
+  position: relative;
+
+  width: 100%;
+  max-width: 900px;
+  min-height: 400px;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding: 0 60px;
+  height: auto; /* permite extinderea */
+  
+}
+
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+
+}
+.carousel-item {
+  flex: 0 0 calc(100% / 3);  /* 3 imagini pe rând */
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+
+.carousel-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;       /* sau 16 / 9, în funcție de imaginile tale */
+  object-fit: cover;         /* sau contain, dacă nu vrei tăiere */
+  border-radius: 8px;
+  display: block;
+  transition: all 0.3s ease-in-out;
+
+}
+
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.carousel-btn.prev {
+  left: 0;   /* mută butonul spre exterior */
+}
+
+.carousel-btn.next {
+  right: 0;  /* mută butonul spre exterior */
+}
+
+
+/*articol */
+.press-articles {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 20px;
+}
+
+.press-articles h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #066bad;
+}
+
+.press-card {
+  display: flex;
+  align-items: flex-start;
+  background: #f9f9f9;
+  border-left: 6px solid #0077cc;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  gap: 20px;
+}
+
+.press-card:hover {
+  transform: translateY(-3px);
+}
+
+.press-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.press-content {
+  flex: 1;
+}
+
+.press-content h3 {
+  margin-top: 0;
+  color: #066bad;
+}
+
+.press-content .meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.press-content a {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #066bad;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.press-content a:hover {
+  text-decoration: underline;
+}
+
+.press-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.press-content h2 {
+  color: #066bad;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .lightbox-img {
+    max-width: 95%;
+    max-height: 70%;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    font-size: 30px;
+    padding: 8px;
+  }
+
+  .close-btn {
+    font-size: 30px;
+    top: 20px;
+    right: 20px;
+  }
+
+
+  .intro {
+    padding: 2em 1em;
+    text-align: center;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .press-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .press-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .press-content {
+    text-align: left;
+    width: 100%;
+  }
+
+  .press-content h3 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .press-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+.carousel-container {
+  margin-bottom: 0;
+}
+
+.press-articles {
+  margin-top: 0;
+}
+
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: auto;
+    padding: 0;
+  }
+
+ 
+  .carousel-btn {
+    top: 45%; /* mai jos pe ecran */
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+
+  .carousel-item img {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+}
